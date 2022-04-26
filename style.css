@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --font: 'Roboto';
+  --gray: #F4F7FE;
+  --coral: #fdb1b1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font), sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 350px;
+  overflow: hidden;
+}
+
+.container .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container .content h1 {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  color: royalblue;
+  margin-bottom: 10px;
+}
+
+.container .content p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.container .form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.container .form-group .input {
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 5px;
+  background: var(--gray);
+  outline: none;
+  margin: 10px 0;
+  font-size: 14px;
+  transition: 0.5s ease;
+}
+
+.container .form-group .input.active {
+  background: var(--coral);
+  color: #fff;
+}
+
+.container .form-group .input::placeholder {
+  font-size: 14px;
+  color: royalblue;
+}
+
+.container .form-group label {
+  font-size: 13.5px;
+  letter-spacing: 0.9px;
+}
+
+.container .form-group .limit-number {
+  text-align: right;
+  display: inline-block;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 85%;
+  }
+}
